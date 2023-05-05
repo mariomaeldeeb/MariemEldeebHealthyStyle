@@ -1,0 +1,62 @@
+<html>
+    <head>
+<title>
+    Marioma Healthy Style 
+</title>
+<link rel="stylesheet" href="style.css"> 
+
+    </head>
+    <body>
+<div class="banner">
+<div class="navbar">
+<ul>
+    <li> <a href="aboutus.html" > About US</a> </li>
+    <li> <a href="#" > Menu </a> </li>
+    <li> <a href="#" > Capabilities </a> </li>
+</ul>
+</div>
+
+<div class="content">
+    <h1>
+        Healthy Food Comes From Healthy Ingredients
+    </h1>
+    <p>
+        We deliver healthy food that are ready to eat.<br>Just choose your own menu you like.
+    </p>
+
+    <div>
+        <a href="learnmore.html">
+        <button type="button"><span></span>Learn More</button>
+        </a>
+       
+    </div>
+</div>
+</div>
+
+    </body>
+    <body onload="startTime()">
+
+        <h2>Time now</h2>
+        
+        <div id="txt"></div>
+        
+        <script>
+        function startTime() {
+          const today = new Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+        
+        </body>
+</html>
